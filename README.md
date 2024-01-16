@@ -388,24 +388,25 @@ Step 3 : Add “JUDGE_AUTHENTICATION_KEY” and “JUDGE_NAME”:
 
 You access to `/admin/`
 
+![image](https://github.com/ThuNganPythonista/DMOJ/blob/main/resources/icons/Screenshot%202024-01-16%20at%202.48.55%20AM.png)
 
 
 and then, you create admin account to login 
 
 
 
-
+![image](https://github.com/ThuNganPythonista/DMOJ/blob/main/resources/icons/Screenshot%202024-01-16%20at%202.51.18%20AM.png)
 
 
 Run this command `python3 manage.py createsuperuser`
 
-
+![image](https://github.com/ThuNganPythonista/DMOJ/blob/main/resources/icons/Screenshot%202024-01-16%20at%202.52.32%20AM.png)
 
 
 Next, we click to `langues` and choose `add judge` to fill in the `judge name` and `authentication key`
 
 
-
+![image](https://github.com/ThuNganPythonista/DMOJ/blob/main/resources/icons/Screenshot%202024-01-16%20at%202.57.39%20AM.png)
 
 Step 4 : Clone `judge server` and run 
 
