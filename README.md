@@ -2,7 +2,7 @@
 
 # I share the instructions to set up `site` and `the judge` of an open source code DMOJ #
 
-**OFFICAL INSTRUCTIONS OF DMOJ : https://docs.dmoj.ca/#/site/installation **
+**OFFICAL INSTRUCTIONS OF DMOJ :**  https://docs.dmoj.ca/#/site/installation
 
 
 Chapter 1 :  Set Up “Site”
