@@ -326,11 +326,7 @@ Configure `local_settings.py` by uncommenting `CELERY_BROKER_URL` and `CELERY_RE
 (*35)`python3 manage.py runserver` : run your django project 
 
 
-
-
-
-
-
+![image](https://github.com/ThuNganPythonista/DMOJ)
 
 
 
