@@ -303,7 +303,7 @@ Same as the previous command with a fixture file named `demo`.
 
 Celery - distributed task queue system in Python
 
-
+![image](https://github.com/ThuNganPythonista/DMOJ/blob/main/resources/icons/Screenshot%202024-01-16%20at%205.18.00%20PM.png)
 
 
 
