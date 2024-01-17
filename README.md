@@ -357,12 +357,12 @@ I will run commands on macOs. In case, you use a window operating system. You ne
 
 Refer to the link above if your computer is using Ubuntu.
 
-Step 1 : Install Docker and Docker compose
+**Step 1 : Install Docker and Docker compose**
 
 Follow its instruction on the web, https://docs.docker.com/compose/install/
 
 
-Step 2 : Running the bridge :
+**Step 2 : Running the bridge :**
 
 Start your server 
 
@@ -384,7 +384,7 @@ You change `localhost` to your actual IP in your computer like your IP wifi
 => change your `localhost`
 
 
-Step 3 : Add “JUDGE_AUTHENTICATION_KEY” and “JUDGE_NAME”:
+**Step 3 : Add “JUDGE_AUTHENTICATION_KEY” and “JUDGE_NAME”:**
 
 You access to `/admin/`
 
@@ -408,11 +408,72 @@ Next, we click to `langues` and choose `add judge` to fill in the `judge name` a
 
 ![image](https://github.com/ThuNganPythonista/DMOJ/blob/main/resources/icons/Screenshot%202024-01-16%20at%202.57.39%20AM.png)
 
-Step 4 : Clone `judge server` and run 
+**Step 4 : With Docker**
 
 `git clone --recursive https://github.com/DMOJ/judge.git`
 
 it means that you clone `judge server` into your project
+
+`cd judge/.docker` :change directory
+
+`make judge-tier1` :  Tier 1 includes Python 2/3, C/C++, Java 8, and Pascal. `make` utility on how to build and compile the project.
+
+```python
+docker run \
+    --name judge \
+    -p "$(ip addr show dev enp1s0 | perl -ne 'm@inet (.*)/.*@ and print$1 and exit')":9998:9998 \
+    -v /mnt/problems:/problems \
+    --cap-add=SYS_PTRACE \
+    -d \
+    --restart=always \
+    dmoj/judge-tier1:latest \
+    run -p "$PORT" -c /problems/judge.yml \
+    "$IP" "$JUDGE_NAME" "$JUDGE_AUTHENTICATION_KEY"
+```
+
+
+ We will replace `name judge` and `JUGE_AUTHENTICATION_KEY`
+that we alr created above.
+
+
+Change the IP to your `actual IP`
+
+
+You can take a glance at my replacement :
+
+```python
+
+docker run \
+	--name Thungan2003\
+	-p 127.0.0.1:9998:9998 \
+	-v /mnt/problems:/problems \
+	--cap-add=SYS_PTRACE \
+	-d \
+	--restart=always \
+	dmoj/judge-tier1:latest \
+    run "189.189.189.112" "Thungan2003" "HUgO1PmkXGvu++DsqnhD7ScooMTEi6VI6fE2JUmeYYJdarV/wuhqWUUh2qjFJfo+m7qj9rj7SRAPYdEqJnDfSDirfpNoTgwtPdRh 
+
+
+```
+
+Next, running this command :
+
+`docker logs -f ID-of-container`
+
+=> `docker logs -f Thungan2003`
+
+
+**Step 5: Check whether the judge is running or not :**
+
+Accessing to `/status/` :
+
+
+
+It shows your judge that is currently online.
+
+
+Accessing to /test_data//, we will upload our test cases here
+
 
 
 
