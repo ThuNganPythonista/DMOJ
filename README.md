@@ -467,7 +467,7 @@ Next, running this command :
 
 Accessing to `/status/` :
 
-
+![image](https://github.com/ThuNganPythonista/DMOJ/blob/main/resources/icons/Screenshot%202024-01-17%20at%203.35.34%20PM.png)
 
 It shows your judge that is currently online.
 
