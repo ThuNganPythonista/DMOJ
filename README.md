@@ -9,7 +9,7 @@
 
 **Chapter 2 : Set Up “Judge Server”**
 
-**I) Set up prerequisites :**
+**I) Set up prerequisites :**.
 
 Prerequisites include software, libraries, or configurations to help us avoid conflicts during the process of deploying and enhance the security of the environment, resulting in stable status.
 
